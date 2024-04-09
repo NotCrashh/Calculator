@@ -1,0 +1,53 @@
+import random
+import math
+
+print("How to use:")
+print("1. Type in your first digit, then click enter")
+print("2. Type in the operation (ex. +, -, *, /), then click enter")
+print("3. Type in your second digit, then click enter")
+print("4. Boom, you now know how to use a calculator\n")
+print("Enter first number:")
+num1 = int(input())
+# Makes num1 equal to input from console
+
+print(f"\nYou entered {num1}")
+print("Enter operator: (ex. +, -, *, /)")
+operator = str(input())
+
+addition = False
+subtraction = False
+multiplication = False
+division = False
+
+if operator == "+":
+    addition = True
+elif operator == "-":
+    subtraction = True
+elif operator == "*":
+    multiplication = True
+elif operator == "x":
+    multiplication = True
+elif operator == "X":
+    multiplication = True
+elif operator == "/":
+    division = True
+else:
+    print("Error: enter real operator (ex. +, -, *, x, /)")
+    quit()
+
+print(f"\nYou entered {operator}")
+print("Enter second number: (ex. +, -, *, /)")
+num2 = int(input())
+calc = 0
+
+if addition == True:
+    calc = num1 + num2
+elif subtraction == True:
+    calc = num1 - num2
+elif multiplication == True:
+    calc = num1 * num2
+elif division == True:
+    calc = num1 / num2
+
+print(f"\nYou entered {num2}")
+print(f"Result: {calc}")
